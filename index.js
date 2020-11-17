@@ -23,7 +23,7 @@ function addItem() {
 
 function checkItem() {
   $(".shopping-list").on("click", ".shopping-item-toggle", function (event) {
-    $(event.currentTarget)
+    $(this)
       .closest("li")
       .find(".shopping-item")
       .toggleClass("shopping-item__checked");
@@ -32,7 +32,7 @@ function checkItem() {
 
 function deleteItem() {
   $(".shopping-list").on("click", ".shopping-item-delete", function (event) {
-    $(event.currentTarget).closest("li").remove();
+    $(this).closest("li").remove();
   });
 }
 
